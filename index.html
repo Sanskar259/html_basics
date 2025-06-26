@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fixed Header and Scrollable Page</title>
+  <style>
+    /* Reset some default margins */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Fixed header section */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .fixed-header h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .fixed-header p {
+      font-size: 16px;
+    }
+
+    /* Main content with margin-top to prevent overlap */
+    .main-content {
+      margin-top: 140px; /* Enough space for fixed header */
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #005fcb;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Heading and Paragraph -->
+  <div class="fixed-header">
+    <h1>Welcome to Our Website</h1>
+    <p>This is a brief introduction paragraph that stays at the top.</p>
+  </div>
+
+  <!-- Scrollable Main Content -->
+  <div class="main-content">
+    <!-- Form Section -->
+    <section>
+      <h2>Contact Form</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" name="name" required />
+
+        <label>Email:</label>
+        <input type="email" name="email" required />
+
+        <label>Message:</label>
+        <textarea name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- About Us Section -->
+    <section>
+      <h2>About Us</h2>
+      <p>We are a team of passionate developers creating awesome web experiences. Our mission is to deliver high-quality, user-friendly websites and applications for all types of businesses and users.</p>
+    </section>
+
+    <!-- More Details Section -->
+    <section>
+      <h2>More Details</h2>
+      <p>This section provides additional information about our services, projects, and goals. Stay tuned for updates and exciting new features!</p>
+    </section>
+  </div>
+
+</body>
+</html>
